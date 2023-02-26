@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{AADD82A0-DB41-4FA6-B4C1-6B1DC275B1C2}|Default">
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsConsumer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Aws" expanded="True">
+            <Node name="Sqs" expanded="True">
+              <Node name="SqsPublisher" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsPublisher PreferredExecutionTarget="MonoDevelop.Default" />
+  <DisabledProjects>
+    <String>SqsPublisher/SqsConsumer/SqsConsumer.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

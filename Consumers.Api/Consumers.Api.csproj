@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Contracts\" />
+    <None Remove="Contracts\Data\" />
+    <None Remove="Contracts\Requests\" />
+    <None Remove="Contracts\Responses\" />
+    <None Remove="Services\" />
+    <None Remove="Domain\" />
+    <None Remove="Mapping\" />
+    <None Remove="Repositories\" />
+    <None Remove="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Data\" />
+    <Folder Include="Contracts\Requests\" />
+    <Folder Include="Contracts\Responses\" />
+    <Folder Include="Services\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.3" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+  </ItemGroup>
+</Project>
