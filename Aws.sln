@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "Sqs\SqsPubl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "Sqs\SqsConsumer\SqsConsumer.csproj", "{AADD82A0-DB41-4FA6-B4C1-6B1DC275B1C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumers.Api", "Sqs\Consumers.Api\Consumers.Api.csproj", "{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Api", "Sqs\Customers.Api\Customers.Api.csproj", "{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

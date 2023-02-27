@@ -1,25 +1,48 @@
 ﻿<Properties StartupConfiguration="{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}|http">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>SqsPublisher/SqsConsumer/SqsConsumer.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.Sqs.Consumers.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsPublisher PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsConsumer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sqs/Consumers.Api/Controllers/CustomerController.cs">
+    <Files>
+      <File FileName="Sqs/Consumers.Api/Messaging/ISqsMessenger.cs" Line="6" Column="31" />
+      <File FileName="Sqs/Consumers.Api/Messaging/SqsMessenger.cs" Line="34" Column="45" />
+      <File FileName="Sqs/Consumers.Api/Messaging/QueueSettings.cs" Line="6" Column="34" />
+      <File FileName="Sqs/Consumers.Api/Contracts/Messages/CustomerMessages.cs" Line="10" Column="52" />
+      <File FileName="Sqs/Consumers.Api/Domain/Customer.cs" Line="1" Column="1" />
+      <File FileName="Sqs/Consumers.Api/Contracts/Requests/CustomerRequest.cs" Line="1" Column="1" />
+      <File FileName="Sqs/Consumers.Api/Contracts/Requests/UpdateCustomerRequest.cs" Line="1" Column="1" />
+      <File FileName="Sqs/Consumers.Api/Contracts/Data/CustomerDto.cs" Line="13" Column="1" />
+      <File FileName="Sqs/Consumers.Api/Controllers/CustomerController.cs" Line="12" Column="21" />
+      <File FileName="Sqs/Consumers.Api/Services/CustomerService.cs" Line="20" Column="1" />
+      <File FileName="Sqs/Consumers.Api/Mapping/DomainToMessageMapper.cs" Line="21" Column="59" />
+      <File FileName="Sqs/Consumers.Api/Program.cs" Line="27" Column="92" />
+      <File FileName="Sqs/Consumers.Api/appsettings.json" Line="5" Column="9" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Aws" expanded="True">
-            <Node name="Sqs" selected="True" />
+          <Node name="Aws" expanded="True" selected="True">
+            <Node name="Sqs" expanded="True">
+              <Node name="Customers.Api" expanded="True">
+                <Node name="Contracts" expanded="True">
+                  <Node name="Messages" expanded="True" />
+                  <Node name="Requests" expanded="True" />
+                </Node>
+                <Node name="Controllers" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sqs.SqsPublisher PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.Sqs.SqsConsumer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Sqs.Customers.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
