@@ -1,26 +1,51 @@
-﻿<Properties StartupConfiguration="{AADD82A0-DB41-4FA6-B4C1-6B1DC275B1C2}|Default">
-  <MonoDevelop.Ide.ItemProperties.Sqs.SqsConsumer PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}|http">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Sqs.Consumers.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Consumers.Api/Controllers/CustomerController.cs">
+    <Files>
+      <File FileName="Consumers.Api/Contracts/Data/CustomerDto.cs" Line="5" Column="2" />
+      <File FileName="Consumers.Api/Contracts/Requests/CustomerDto.cs" Line="6" Column="30" />
+      <File FileName="Consumers.Api/Contracts/Requests/UpdateCustomerRequest.cs" Line="10" Column="2" />
+      <File FileName="Consumers.Api/Contracts/Responses/CustomerResponse.cs" Line="12" Column="1" />
+      <File FileName="Consumers.Api/Contracts/Responses/GetAllCustomerResponse.cs" Line="4" Column="37" />
+      <File FileName="Consumers.Api/Controllers/CustomerController.cs" Line="7" Column="37" />
+      <File FileName="Consumers.Api/Program.cs" Line="45" Column="1" />
+      <File FileName="Consumers.Api/Services/ICustomerService.cs" Line="8" Column="13" />
+      <File FileName="Consumers.Api/Domain/Customer.cs" Line="6" Column="52" />
+      <File FileName="Consumers.Api/Mapping/ApiContractToDomainMapper.cs" Line="31" Column="3" />
+      <File FileName="Consumers.Api/Mapping/DomainToApiContractMapper.cs" Line="21" Column="62" />
+      <File FileName="Consumers.Api/Services/CustomerService.cs" Line="70" Column="1" />
+      <File FileName="Consumers.Api/Repositories/ICustomerRepository.cs" Line="11" Column="39" />
+      <File FileName="Consumers.Api/Repositories/CustomerRepository.cs" Line="63" Column="27" />
+      <File FileName="Consumers.Api/Mapping/DomainToDtoMapper.cs" Line="9" Column="28" />
+      <File FileName="Consumers.Api/Database/DbConnectionFactory.cs" Line="25" Column="38" />
+      <File FileName="Consumers.Api/Database/DatabaseInitializer.cs" Line="15" Column="35" />
+      <File FileName="Consumers.Api/Database/GuidTypeHandler.cs" Line="21" Column="2" />
+      <File FileName="Consumers.Api/appsettings.json" Line="7" Column="5" />
+      <File FileName="Consumers.Api/Mapping/DtoToDomainMapper.cs" Line="9" Column="35" />
+      <File FileName="Consumers.Api/Validation/ValidationExceptionMiddleware.cs" Line="31" Column="43" />
+      <File FileName="Consumers.Api/Services/IGitHubService.cs" Line="4" Column="32" />
+      <File FileName="Consumers.Api/Services/GitHubService.cs" Line="7" Column="44" />
+      <File FileName="Consumers.Api/Controllers/FromMultiSourceAttribute.cs" Line="7" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Aws" expanded="True">
-            <Node name="Sqs" expanded="True">
-              <Node name="SqsPublisher" selected="True" />
-            </Node>
+            <Node name="Sqs" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sqs.SqsPublisher PreferredExecutionTarget="MonoDevelop.Default" />
-  <DisabledProjects>
-    <String>SqsPublisher/SqsConsumer/SqsConsumer.csproj</String>
-  </DisabledProjects>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsPublisher PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>SqsPublisher/SqsConsumer/SqsConsumer.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.Sqs.SqsConsumer PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

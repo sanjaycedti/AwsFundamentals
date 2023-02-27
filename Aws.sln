@@ -1,15 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1705.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqs", "Sqs", "{C1412EAA-1C7F-45BC-8F71-852E35F1F699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "SqsPublisher\SqsPublisher.csproj", "{DE06ADAA-0FC5-410E-8559-CE3FF273631F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "Sqs\SqsPublisher\SqsPublisher.csproj", "{DE06ADAA-0FC5-410E-8559-CE3FF273631F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "SqsConsumer\SqsConsumer.csproj", "{AADD82A0-DB41-4FA6-B4C1-6B1DC275B1C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "Sqs\SqsConsumer\SqsConsumer.csproj", "{AADD82A0-DB41-4FA6-B4C1-6B1DC275B1C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumers.Api", "Consumers.Api\Consumers.Api.csproj", "{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumers.Api", "Sqs\Consumers.Api\Consumers.Api.csproj", "{453EC6ED-AF4A-42BD-9E08-4AB3119734FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
