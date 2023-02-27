@@ -1,4 +1,6 @@
-﻿using Consumers.Api.Database;
+﻿using Amazon.SQS;
+using Consumers.Api.Database;
+using Consumers.Api.Messaging;
 using Consumers.Api.Repositories;
 using Consumers.Api.Services;
 using Consumers.Api.Validation;
@@ -21,6 +23,11 @@ builder.Services.AddSingleton<IDbConnectionFactory>(_ =>
 new SqliteConnectionFactory(config.GetValue<string>("Database:ConnectionString")!));
 
 builder.Services.AddSingleton<DatabaseInitializer>();
+
+builder.Services.Configure<QueueSettings>(builder.Configuration.GetSection(QueueSettings.Key));
+builder.Services.AddSingleton<IAmazonSQS, AmazonSQSClient>();
+builder.Services.AddSingleton<ISqsMessenger, SqsMessenger>();
+
 builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
 builder.Services.AddSingleton<IGitHubService, GitHubService>();

@@ -19,6 +19,8 @@
     <None Remove="Repositories\" />
     <None Remove="Database\" />
     <None Remove="Validation\" />
+    <None Remove="Messaging\" />
+    <None Remove="Contracts\Messages\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -32,10 +34,13 @@
     <Folder Include="Repositories\" />
     <Folder Include="Database\" />
     <Folder Include="Validation\" />
+    <Folder Include="Messaging\" />
+    <Folder Include="Contracts\Messages\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.3" />
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.100.79" />
   </ItemGroup>
 </Project>
