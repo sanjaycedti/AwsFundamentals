@@ -7,4 +7,3 @@ public class CustomerCreated
 	public required string Email { get; init; }
 	public required DateTime DateOfBirth { get; init; }
 }
-

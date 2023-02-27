@@ -45,4 +45,5 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Sqs.Customers.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Sqs.Customers.Consumer FirstBuild="True" />
 </Properties>
