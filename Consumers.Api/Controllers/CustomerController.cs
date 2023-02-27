@@ -52,5 +52,38 @@ public class CustomerController : ControllerBase
 
 		return Ok(customersResponse);
     }
+
+	[HttpPut("customers/{id:guid}")]
+	public async Task<IActionResult> Update(
+		[FromMultiSource] UpdateCustomerRequest request)
+	{
+		var existingCustomer = await _customerService.GetAsync(request.Id);
+
+		if (existingCustomer is null)
+		{
+			return NotFound();
+		}
+
+		var customer = request.ToCustomer();
+
+		await _customerService.UpdateAsync(customer);
+
+		var response = customer.ToCustomerResponse();
+
+		return Ok(response);
+	}
+
+    [HttpDelete("customers/{id:guid}")]
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
+	{
+		var deleted = await _customerService.DeleteAsync(id);
+
+		if (!deleted)
+		{
+			return NotFound();
+		}
+
+		return Ok();
+	}
 }
 

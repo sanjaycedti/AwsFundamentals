@@ -18,6 +18,7 @@
     <None Remove="Mapping\" />
     <None Remove="Repositories\" />
     <None Remove="Database\" />
+    <None Remove="Validation\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -30,6 +31,7 @@
     <Folder Include="Mapping\" />
     <Folder Include="Repositories\" />
     <Folder Include="Database\" />
+    <Folder Include="Validation\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.3" />

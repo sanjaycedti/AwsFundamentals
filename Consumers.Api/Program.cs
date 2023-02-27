@@ -1,8 +1,10 @@
 ﻿using Consumers.Api.Database;
 using Consumers.Api.Repositories;
 using Consumers.Api.Services;
+using Consumers.Api.Validation;
 using Dapper;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,13 +23,24 @@ new SqliteConnectionFactory(config.GetValue<string>("Database:ConnectionString")
 builder.Services.AddSingleton<DatabaseInitializer>();
 builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
+builder.Services.AddSingleton<IGitHubService, GitHubService>();
 
+builder.Services.AddHttpClient("GitHub", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(config.GetValue<string>("GitHub:ApiBaseUrl")!);
+    httpClient.DefaultRequestHeaders.Add(
+        HeaderNames.Accept, "application/vnd.github.v3+json");
+    httpClient.DefaultRequestHeaders.Add(
+        HeaderNames.UserAgent, $"Course-${Environment.MachineName}");
+});
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
 app.UseAuthorization();
+
+app.UseMiddleware<ValidationExceptionMiddleware>();
 
 app.MapControllers();
 

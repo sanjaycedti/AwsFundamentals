@@ -10,11 +10,12 @@ namespace Consumers.Api.Services;
 public class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _customerRepository;
+    private readonly IGitHubService _gitHubService;
 
-    public CustomerService(ICustomerRepository customerRepository)
+    public CustomerService(ICustomerRepository customerRepository, IGitHubService gitHubService)
 	{
         _customerRepository = customerRepository;
-
+        _gitHubService = gitHubService;
     }
 
     public async Task<bool> CreateAsync(Customer customer)
@@ -26,6 +27,14 @@ public class CustomerService : ICustomerService
             var message = $"A customer with Id {customer.Id} already exists";
 
             throw new ValidationException(message, GenerateValidationError(nameof(Customer), message));
+        }
+
+        var isValidGitHubUser = await _gitHubService.IsValidGitHubUser(customer.GitHubUsername);
+
+        if (!isValidGitHubUser)
+        {
+            var message = $"There is no GitHub user with username {customer.GitHubUsername}";
+            throw new ValidationException(message, GenerateValidationError(nameof(customer.GitHubUsername), message));
         }
 
         var customerDto = customer.ToCustomerDto();
@@ -47,14 +56,24 @@ public class CustomerService : ICustomerService
         return customerDtos.Select(c => c.ToCustomer());
     }
 
-    public Task<bool> DeleteAsync(Guid id)
+    public async Task<bool> UpdateAsync(Customer customer)
     {
-        throw new NotImplementedException();
+        var customerDto = customer.ToCustomerDto();
+
+        var isValidGitHubUser = await _gitHubService.IsValidGitHubUser(customer.GitHubUsername);
+
+        if (!isValidGitHubUser)
+        {
+            var message = $"There is no GitHub user with username {customer.GitHubUsername}";
+            throw new ValidationException(message, GenerateValidationError(nameof(customer.GitHubUsername), message));
+        }
+
+        return await _customerRepository.UpdateAsync(customerDto);
     }
 
-    public Task<bool> UpdateAsync(Customer customer)
+    public async Task<bool> DeleteAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await _customerRepository.DeleteAsync(id);
     }
 
     private static ValidationFailure[] GenerateValidationError(string paramName, string message)

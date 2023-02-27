@@ -17,5 +17,17 @@ public static class ApiContractToDomainMapper
 			DateOfBirth = request.DateOfBirth
 		};
 	}
+
+	public static Customer ToCustomer(this UpdateCustomerRequest request)
+	{
+		return new Customer
+		{
+			Id = request.Id,
+			Email = request.Customer.Email,
+			GitHubUsername = request.Customer.GitHubUsername,
+			FullName = request.Customer.FullName,
+			DateOfBirth = request.Customer.DateOfBirth
+		};
+	}
 }
 

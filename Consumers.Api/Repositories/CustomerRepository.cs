@@ -41,14 +41,26 @@ public class CustomerRepository : ICustomerRepository
         return await connection.QueryAsync<CustomerDto>("SELECT * FROM Customers");
     }
 
-    public Task<bool> DeleteAsync(Guid id)
+    public async Task<bool> UpdateAsync(CustomerDto customer)
     {
-        throw new NotImplementedException();
+        using var connection = await _dbConnectionFactory.CreateConenctionAsync();
+
+        var result = await connection.ExecuteAsync(
+            @"
+            UPDATE Customers SET GitHubUsername = @GitHubUsername, FullName = @FullName, Email = @Email, DateOfBirth = @DateOfBirth
+            WHERE Id=@Id", customer);
+
+        return result > 0;
     }
 
-    public Task<bool> UpdateAsync(CustomerDto customer)
+    public async Task<bool> DeleteAsync(Guid id)
     {
-        throw new NotImplementedException();
+        using var connection = await _dbConnectionFactory.CreateConenctionAsync();
+
+        var result = await connection.ExecuteAsync(@"DELETE FROM Customers WHERE Id = @Id",
+            new { Id = id });
+
+        return result > 0;
     }
 }
 
